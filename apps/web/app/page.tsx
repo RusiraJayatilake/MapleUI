@@ -1,7 +1,13 @@
+import Header from "../components/layout/Header";
+import Footer from "../components/layout/Footer";
+import HeroSection from "../components/other/HeroSection";
+
 export default function Home() {
   return (
     <>
-      <h1 className="text-3xl font-bold underline">Hello world!</h1>
+      <Header />
+      <HeroSection />
+      {/* <Footer /> */}
     </>
   );
 }

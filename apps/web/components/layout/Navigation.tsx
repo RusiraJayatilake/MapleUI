@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { useRef, useState } from "react";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
@@ -71,10 +73,11 @@ const Navigation = () => {
 
   return (
     <div className="flex flex-row gap-4 items-center">
-      <Link href="/docs/how-to-use">
-        <a className="pr-3 text-sm border-r-2 md:text-lg border-maple-black/20 hover:text-maple-black/80">
-          How to use
-        </a>
+      <Link
+        href="/docs/how-to-use"
+        className="pr-3 text-sm border-r-2 md:text-lg border-maple-black/20 hover:text-maple-black/80"
+      >
+        How to use
       </Link>
       <div>
         <a

@@ -1,4 +1,3 @@
-import Image from "next/image";
 const Footer = () => {
   return (
     <footer className="flex flex-row items-center justify-center gap-2 text-maple-black">
@@ -9,7 +8,7 @@ const Footer = () => {
         rel="noopener noreferrer"
         className="no-underline hover:underline text-2xl font-semibold text-maple-black font-Cursive"
       >
-        @khazifire
+        @rusira
       </a>
     </footer>
   );
