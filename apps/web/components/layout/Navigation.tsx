@@ -1,20 +1,21 @@
 "use client";
 
 import Link from "next/link";
-import { useRef, useState } from "react";
+import React, { useRef, useState } from "react";
 import useWindowDimensions from "../../hooks/useWindowDimensions";
 
 const TWITTER_LINK =
   "https://twitter.com/intent/tweet?url=https://khazifire.com&text=mapleUI%20is%20a%20collection%20of%20free%20Tailwind%20CSS%20components%20that%20can%20be%20used%20in%20your%20next%20project.%20%0A-%20By%20@khazifire%0A";
 const GITHUB_LINK = "https://github.com/khazifire/mapleUI";
 
-const Navigation = () => {
-  const [isMobileOpen, setIsMobileOpen] = useState(false);
+const Navigation: React.FC = () => {
+  const [isMobileOpen, setIsMobileOpen] = useState<boolean>(false);
   const { width } = useWindowDimensions();
-  const ref = useRef(null);
+  const ref = useRef<HTMLDivElement>(null);
   const styleMobile =
     "flex absolute flex-col justify-evenly items-end mt-2 right-0 bg-black text-white p-3 w-64 min-w-full";
 
+  // Mobile Navigation
   if (width < 700) {
     return (
       <div className="md:hidden relative">
@@ -40,10 +41,11 @@ const Navigation = () => {
         </div>
         {isMobileOpen && (
           <div className={styleMobile} ref={ref}>
-            <Link href="/docs/how-to-use">
-              <a className="pr-3 text-sm border-b-2 border-maple-black/20 hover:text-maple-white/80">
-                How to use
-              </a>
+            <Link
+              href="/docs/how-to-use"
+              className="pr-3 text-sm border-b-2 border-maple-black/20 hover:text-maple-white/80"
+            >
+              How to use
             </Link>
 
             <a
@@ -52,7 +54,7 @@ const Navigation = () => {
               className="inline-flex items-center gap-2 pr-3 text-sm group hover:text-maple-white/80 border-b-2 border-maple-black/20"
               href={TWITTER_LINK}
             >
-              <i className="text-lg ri-twitter-line group-hover:-rotate-12"></i>{" "}
+              <i className="text-lg ri-twitter-line group-hover:-rotate-12" />{" "}
               Share on twitter
             </a>
 
@@ -62,7 +64,7 @@ const Navigation = () => {
               href={GITHUB_LINK}
               className="inline-flex items-center gap-2 pr-3 text-sm group hover:text-maple-white/80"
             >
-              <i className="text-lg ri-github-line group-hover:-rotate-12"></i>
+              <i className="text-lg ri-github-line group-hover:-rotate-12" />
               Visit on Github
             </a>
           </div>
@@ -86,7 +88,7 @@ const Navigation = () => {
           className="inline-flex items-center text-sm md:text-lg group hover:text-maple-black/80 border-r-2 border-maple-black/20"
           href={TWITTER_LINK}
         >
-          <i className="text-lg ri-twitter-line group-hover:-rotate-12 "></i>{" "}
+          <i className="text-lg ri-twitter-line group-hover:-rotate-12" />
           Share on twitter
         </a>
       </div>
@@ -97,7 +99,7 @@ const Navigation = () => {
         href={GITHUB_LINK}
         className=" hover:text-maple-black/80 hover:-rotate-12"
       >
-        <i className="text-lg ri-github-line"></i>
+        <i className="text-lg ri-github-line" />
       </a>
     </div>
   );

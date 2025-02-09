@@ -11,7 +11,6 @@
     "check-types": "tsc --noEmit"
   },
   "dependencies": {
-    "@repo/ui": "*",
     "next": "^15.1.6",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
@@ -19,6 +18,7 @@
   "devDependencies": {
     "@repo/eslint-config": "*",
     "@repo/typescript-config": "*",
+    "@repo/ui": "^0.0.0",
     "@tailwindcss/postcss": "^4.0.4",
     "@types/node": "^22",
     "@types/react": "19.0.8",
