@@ -20,9 +20,12 @@ const Header = () => {
             Components
           </Link>
 
-          {/* <Link href="/designs" className="pl-2 text-sm pointer-events md:text-lg border-maple-black/20 hover:text-maple-black/80 disabled">
-           Web Designs
-          </Link> */}
+          <Link
+            href="/designs"
+            className="pl-2 text-sm pointer-events md:text-lg border-maple-black/20 hover:text-maple-black/80 disabled"
+          >
+            Web Designs
+          </Link>
         </div>
 
         <Navigation />

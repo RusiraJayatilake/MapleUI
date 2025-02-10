@@ -7,11 +7,13 @@ interface IWindowDimensions {
 
 export default function useWindowDimensions() {
   const [windowDimensions, setWindowDimensions] = useState<IWindowDimensions>({
-    height: window.innerHeight,
-    width: window.innerWidth,
+    height: 0,
+    width: 0,
   });
 
   useEffect(() => {
+    if (typeof window === "undefined") return;
+
     const handleResize = () => {
       setWindowDimensions({
         height: window.innerHeight,
