@@ -134,14 +134,14 @@ export async function getAllChilds(pathString: string) {
         "/contents/docs/",
         prevHref,
         it.href,
-        "index.mdx",
+        "index.mdx"
       );
       const raw = await fs.readFile(totalPath, "utf-8");
       return {
         ...justGetFrontmatterFromMD<BaseMdxFrontmatter>(raw),
         href: `/docs${prevHref}${it.href}`,
       };
-    }),
+    })
   );
 }
 
@@ -200,7 +200,7 @@ export async function getAllBlogs() {
         ...justGetFrontmatterFromMD<BlogMdxFrontmatter>(rawMdx),
         slug: file.split(".")[0],
       };
-    }),
+    })
   );
   return uncheckedRes.filter((it) => !!it) as (BlogMdxFrontmatter & {
     slug: string;
