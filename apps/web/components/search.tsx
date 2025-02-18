@@ -42,7 +42,7 @@ export default function Search() {
     <div>
       <Dialog
         open={isOpen}
-        onOpenChange={(open) => {
+        onOpenChange={(open: boolean | ((prevState: boolean) => boolean)) => {
           if (!open) setSearchedInput("");
           setIsOpen(open);
         }}
