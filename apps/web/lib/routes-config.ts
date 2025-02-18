@@ -27,6 +27,7 @@ export const ROUTES: EachRoute[] = [
         title: "Components",
         href: "/components",
         items: [
+          { title: "buttons", href: "/buttons" },
           { title: "Stepper", href: "/stepper" },
           { title: "Tabs", href: "/tabs" },
           { title: "Note", href: "/note" },
